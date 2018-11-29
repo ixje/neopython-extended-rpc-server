@@ -1,0 +1,9 @@
+[run]
+source =
+  neopython_ext_rpc_server
+  extrpc-plugin-example
+
+[report]
+omit =
+  venv*
+  tests
