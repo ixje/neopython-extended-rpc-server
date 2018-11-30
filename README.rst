@@ -13,7 +13,7 @@ Next, open your `neo-python's <https://github.com/CityOfZion/neo-python/>`__ ``p
 
 "RPCServer": "neopython_ext_rpc_server.ExtRpcServer.ExtendedJsonRpcApi"
 
-Note that the default installation has not additional commands over ``neo-python``'s build-in RPC Server.
+Note that the default installation has no additional commands over ``neo-python``'s build-in RPC Server.
 
 Extending with new commands
 ---------------------------
@@ -24,7 +24,7 @@ You can extend the RPC server with your own commands by creating a plugin. This 
 
 If your plugin does not adhere to the above 2 requirements it will not be picked up by the loader. The easiest approach is probably to copy the example plugin folder and adjust it to your needs.
 
-Once your done you can either share your plugin via `PyPi <https://pypi.org/>`__ (`Instructions <https://packaging.python.org/tutorials/packaging-projects/>`__) to make it installable via ``pip`` or you can install it directly using ``python setup.py install``.
+Once you're done you can either share your plugin via `PyPi <https://pypi.org/>`__ (`Instructions <https://packaging.python.org/tutorials/packaging-projects/>`__) to make it installable via ``pip`` or you can install it directly using ``python setup.py install``.
 
  Note: you have to restart the RPC server for new commands to be picked up.
 

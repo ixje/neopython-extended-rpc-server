@@ -12,6 +12,17 @@ class ExamplePluginTest(ExtendedJsonRpcApiTestCase):
         req = self._gen_post_rpc_req("my_command")
         mock_req = mock_post_request(json.dumps(req).encode("utf-8"))
         res = json.loads(self.app.home(mock_req))
+        """
+        if the following assert fails, then it is most likely followed by the following message
+        
+        AssertionError: 'error' unexpectedly found in {'jsonrpc': '2.0', 'id': '2', 'error': {'code': -32601, 'message': 'Method not found'}}
+        
+        This indicates that you did not yet install the plugin. Use any form of `pip install <package>`, 
+        `pip install -e <package>` or `setup.py install` to install it and try again.
+        """
+        self.assertNotIn('error', res)
+
+        self.assertIn('result', res)
         self.assertEqual('first command success', res['result'])
 
         req = self._gen_post_rpc_req("my_command2")
