@@ -9,5 +9,5 @@ class ExtendedRpcCommand(ABC):
 
     @classmethod
     @abstractmethod
-    def execute(cls, json_rpc_api, method):
+    def execute(cls, json_rpc_api, method, params):
         return "result"

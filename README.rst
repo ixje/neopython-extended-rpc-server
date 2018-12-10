@@ -28,3 +28,11 @@ Once you're done you can either share your plugin via `PyPi <https://pypi.org/>`
 
  Note: you have to restart the RPC server for new commands to be picked up.
 
+If you get the following error when starting the Extended RPC server after you've installed your custom command:
+
+::
+
+ Failed to import module neopython_ext_rpc_server.ExtRpcServer with error: No module named 'your_plugin_name'
+
+Then that likely means you did not include an `__init__.py` file in your module package. Add it, install again and you should be good to go.
+
